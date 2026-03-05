@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Insurance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #333;
+        }
+        header {
+            background-color: red;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .expandable {
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .expand-button {
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            font-size: 16px;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+        }
+        footer {
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>VIP Insurance</h1>
+        <nav>
+            <a href="#products">Products</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="expandable">
+        <button class="expand-button" onclick="toggleContent('productContent')">Our Products</button>
+        <div id="productContent" class="content">
+            <p>Insurance Product 1</p>
+            <p>Insurance Product 2</p>
+            <p>Insurance Product 3</p>
+        </div>
+    </div>
+
+    <div class="expandable">
+        <button class="expand-button" onclick="toggleContent('serviceContent')">Our Services</button>
+        <div id="serviceContent" class="content">
+            <p>Insurance Service 1</p>
+            <p>Insurance Service 2</p>
+            <p>Insurance Service 3</p>
+        </div>
+    </div>
+
+    <footer>
+        <h3>Contact Us</h3>
+        <p>Email: contact@vipinsurance.com</p>
+        <p>Phone: (123) 456-7890</p>
+    </footer>
+</body>
+</html>
